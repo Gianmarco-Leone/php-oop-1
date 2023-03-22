@@ -2,7 +2,7 @@
 
 > Primo esercizio Programmazione Orientata agli Oggetti
 
-![Screenshot](./Screenshot_1.png)
+![Screenshot](./Screenshot_2.png)
 
 ## TECNOLOGIE e LIBRERIE:
 
