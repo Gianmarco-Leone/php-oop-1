@@ -43,9 +43,9 @@ foreach ($movies as $movie) {
 
 <body>
     <div class="container py-5">
-        <h1 class="mb-5">Film</h1>
+        <h1 class="mb-5 text-center">Film</h1>
 
-        <ul>
+        <ul class="d-flex flex-wrap justify-content-center">
             <!-- Per ogni film nella lista dei film -->
             <?php foreach($movie_obj_list as $movie) { ?>
 
