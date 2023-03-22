@@ -3,14 +3,14 @@
         public $name;
         public $release_date;
         public $duration;
-        public $primary_genre;
+        public $genres;
 
-        public function __construct(string $_name, int $_release_date, int $_duration, Genre $_primary_genre)
+        public function __construct(string $_name, int $_release_date, int $_duration, Genre $_genres)
         {
             $this -> name = $_name;
             $this -> setReleaseDate($_release_date);
             $this -> duration = $_duration;
-            $this -> primary_genre = $_primary_genre;
+            $this -> genres = $_genres;
         }
 
         public function setReleaseDate($date) {
@@ -21,21 +21,19 @@
     }
 
     class Genre {
-        public $genre_name;
+        public $genres;
 
-        public function __construct(string $_genre_name)
+        public function __construct(array $_genres)
         {
-            $this -> genre_name = $_genre_name;
+            $this -> genres = $_genres;
         }
     }
 
-    $genre_1 = new Genre("Azione");
-    $genre_2 = new Genre("Avventura");
+    $genres_1 = new Genre(["Azione", "Avventura"]);
 
 
-
-    $movie_1 = new Movie("Hulk", 2003, 138, $genre_1);
-    $movie_2 = new Movie("Spider-Man", 2002, 121, $genre_2);
+    $movie_1 = new Movie("Hulk", 2003, 138, $genres_1);
+    $movie_2 = new Movie("Spider-Man", 2002, 121, $genres_1);
 ?>
 
 <!DOCTYPE html>
@@ -79,7 +77,7 @@
 
                 <li>
                     Genere principale:
-                    <?= $movie_1 -> primary_genre -> genre_name ?>
+                    <?= $movie_2 -> genres -> genres[0]  ?>
                 </li>
             </ul>
         </li>
@@ -104,7 +102,13 @@
 
                 <li>
                     Genere principale:
-                    <?= $movie_2 -> primary_genre -> genre_name ?>
+                    <ul>
+                        <?php foreach($genres_1 ->genres as $genre) { ?>
+                        <li>
+                            <?= $genre ?>
+                        </li>
+                        <?php } ?>
+                    </ul>
                 </li>
             </ul>
         </li>
