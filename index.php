@@ -19,6 +19,7 @@
     }
 
     $movie_1 = new Movie("Hulk", 2003, 138);
+    $movie_2 = new Movie("Spider-Man", 2002, 121);
 ?>
 
 <!DOCTYPE html>
@@ -32,26 +33,58 @@
 </head>
 
 <body>
+    <style>
+    ul {
+        list-style: none;
+        margin: 1rem;
+    }
+    </style>
 
     <h1>Film</h1>
 
     <ul>
         <li>
-            Nome:
-            <?= $movie_1 -> name ?>
+            <ul>
+                <li>
+                    Nome:
+                    <?= $movie_1 -> name ?>
+                </li>
+
+                <li>
+                    Anno d'uscita:
+                    <?= $movie_1 -> release_date ?>
+                </li>
+
+                <li>
+                    Durata:
+                    <?= $movie_1 -> duration ?>
+                    m
+                </li>
+            </ul>
         </li>
 
         <li>
-            Anno d'uscita:
-            <?= $movie_1 -> release_date ?>
-        </li>
+            <ul>
+                <li>
+                    Nome:
+                    <?= $movie_2 -> name ?>
+                </li>
 
-        <li>
-            Durata:
-            <?= $movie_1 -> duration ?>
-            m
+                <li>
+                    Anno d'uscita:
+                    <?= $movie_2 -> release_date ?>
+                </li>
+
+                <li>
+                    Durata:
+                    <?= $movie_2 -> duration ?>
+                    m
+                </li>
+            </ul>
         </li>
     </ul>
+
+
 </body>
 
 </html>
