@@ -31,6 +31,6 @@
 
 - Creare un layout completo per stampare a schermo una lista di movies.
   - Suddividere il codice in appositi file e cartelle:
-    <!-- - creando un file dedicato ai dati che potremmo chiamare db.php -->
+    - creando un file dedicato ai dati che potremmo chiamare db.php
     - Mettendo ciascuna classe nel proprio file e magari raggruppare tutte le classi in una cartella dedicata che possiamo chiamare Models
     - Organizzando il layout dividendo la struttura ed i contenuti in file e parziali dedicati.

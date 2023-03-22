@@ -4,20 +4,23 @@
 require_once __DIR__ . "/models/Movie.php";
 require_once __DIR__ . "/models/Genre.php"; 
 
+// Importo file dati
+require_once __DIR__ . "/data/db.php";
+
 // Creo un'istanza della classe Genre
 $genres_1 = new Genre(["Azione", "Avventura"]);
 
-// Creo due variabili per le trame dei film
-$plot_1 = "Lo scienziato Bruce Banner ha qualche problema di controllo dell'ira. Nel corso di un esperimento
-andato male l'uomo si trasforma in un mostro verde che usa la rabbia per salvare le vite umane.";
-$plot_2 = "Il morso di un ragno mutante dona degli incredibili, e inaspettati, poteri al giovane Peter Parker, che li usa nella guerra contro un minaccioso nemico.
-";
-
-// Creo un array che conterrà le istanze della classe Movie
-$movie_list = [
-    new Movie("Hulk", 2003, 138, $genres_1, $plot_1),
-    new Movie("Spider-Man", 2002, 121, $genres_1, $plot_2)
-];
+// Trasformo l'array associatico che ho nel file db in un array di oggetti
+$movie_obj_list = [];
+foreach ($movies as $movie) {
+    $movie_obj_list[] = new Movie(
+        $movie["name"],
+        $movie["release_date"],
+        $movie["duration"],
+        $genres_1,
+        $movie["plot"],
+    );
+}
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +47,7 @@ $movie_list = [
 
         <ul>
             <!-- Per ogni film nella lista dei film -->
-            <?php foreach($movie_list as $movie) { ?>
+            <?php foreach($movie_obj_list as $movie) { ?>
 
             <!-- Includo il file template che stampa la card -->
             <?php include __DIR__ . "/template/movie_card.php" ?>
