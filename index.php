@@ -4,14 +4,15 @@
         public $release_date;
         public $duration;
 
+        public function __construct($_name, $_release_date, $_duration)
+        {
+            $this -> name = $_name;
+            $this -> release_date = $_release_date;
+            $this -> duration = $_duration;
+        }
     }
 
-    $movie_1 = new Movie();
-    $movie_1 -> name = "Hulk";
-    $movie_1 -> release_date = 2008;
-    $movie_1 -> duration = 120;
-
-    // var_dump($movie_1);
+    $movie_1 = new Movie("Hulk", 2003, 138);
 ?>
 
 <!DOCTYPE html>
@@ -42,6 +43,7 @@
         <li>
             Durata:
             <?= $movie_1 -> duration ?>
+            m
         </li>
     </ul>
 </body>
