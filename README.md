@@ -1,9 +1,15 @@
 # PRIMO ESERCIZIO OOP
 
+> Primo esercizio Programmazione Orientata agli Oggetti
+
+![Screenshot](./Screenshot_1.png)
+
 ## TECNOLOGIE e LIBRERIE:
 
-- html
-- php
+- Html
+- Css
+- Bootstrap
+- Php
 
 ## SVOLGIMENTO:
 
@@ -19,7 +25,7 @@
 
 ## Bonus 1:
 
-Modificare la classe Movie in modo che accetti piú di un genere.
+- Modificare la classe Movie in modo che accetti piú di un genere.
 
 ## Bonus 2:
 

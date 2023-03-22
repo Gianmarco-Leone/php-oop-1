@@ -2,19 +2,19 @@
     <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">
-                <?= $movie_1 -> name ?>
+                <?= $movie -> name ?>
             </h5>
             <h6 class="card-subtitle mb-2">
                 Anno d'uscita:
-                <?= $movie_1 -> release_date ?>
+                <?= $movie -> release_date ?>
             </h6>
             <h6 class="card-subtitle mb-2">
                 Durata:
-                <?= $movie_1 -> duration ?>
+                <?= $movie -> duration ?>
                 m
             </h6>
             <p class="card-text">
-                <?= $movie_1 -> getAbstract() ?>
+                <?= $movie -> getAbstract() ?>
             </p>
             <h6 class="card-subtitle mb-2">
                 Genere principale:
