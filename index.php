@@ -7,8 +7,14 @@
         public function __construct($_name, $_release_date, $_duration)
         {
             $this -> name = $_name;
-            $this -> release_date = $_release_date;
+            $this -> setReleaseDate($_release_date);
             $this -> duration = $_duration;
+        }
+
+        public function setReleaseDate($date) {
+            if (!is_numeric($date)) return false;
+
+            $this -> release_date = $date;
         }
     }
 
